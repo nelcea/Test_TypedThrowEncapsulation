@@ -12,7 +12,7 @@ struct Test_TypedThrowEncapsulation {
 }
 
 enum Level1 {
-    // This crashes the compiler
+    // This causes a compiler assertion failure
     static func encapsulateLevel2() throws(Level1Error) {
         do throws(Level2Error) {
             try Level2.throwLevel2Error()
